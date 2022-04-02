@@ -1,11 +1,12 @@
 <div class="content">
-    <form class="form">
-        <input type="text" name="email">
-        <input type="password" name="senha">
+    <form  #data="ngForm" class="form" (submit)="signIn(data.value, password.value)">
+        <input type="text" ngModel name="email">
+
+        <input type="password" #password name="senha">
 
         <div>
             <button type="submit">Login</button>
-            <button type="button">Register</button>
+            <button type="button" (click)="signUp()">Register</button>
         </div>
     </form>
 </div>

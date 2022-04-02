@@ -1,1 +1,14 @@
-<p>sign-up works!</p>
+<div class="content">
+    <form  #data="ngForm" class="form" (submit)="signUp(data.value, password.value)">
+
+        <input type="text" ngModel  name="name" placeholder="nome">
+        <input type="text" ngModel name="email" placeholder="email">
+
+        <input type="password" #password name="senha" placeholder="senha">
+
+        <div>
+            <button type="submit">Cadastrar</button>
+            <button type="button" (click)="Return()">Voltar</button>
+        </div>
+    </form>
+</div>

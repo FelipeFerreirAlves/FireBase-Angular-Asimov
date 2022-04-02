@@ -7,6 +7,7 @@ import {
   AngularFirestoreDocument,
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { user } from '@angular/fire/auth';
 
 
 @Injectable({
@@ -29,6 +30,32 @@ export class AuthService {
         console.log(error)
       });
   }
+
+  SignIn(email: string, password: string){
+    return this.afAuth
+      .signInWithEmailAndPassword(email, password)
+      .then((result) => {
+        if(result.user){
+         this.GetUserData(result.user?.uid).then((users)=>{
+           users.forEach((user) =>{
+             localStorage.setItem('user',JSON.stringify(user.data()));
+           });
+         });
+        }
+        this.router.navigate(['home']);
+      })
+      .catch((error) =>{
+        console.log(error);
+      });
+  }
+
+   async GetUserData(uid: string){
+    const docRef = this.firestore.collection('users').ref;
+
+    return await docRef.where('uid', '==', uid).get();
+    
+  }
+
 
   SetUserData(loginResponse: any, user: User){
     const userRef: AngularFirestoreDocument<any> = this.firestore.doc('users/${loginResponse.uid'
