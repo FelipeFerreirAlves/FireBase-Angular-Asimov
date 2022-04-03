@@ -1,10 +1,11 @@
 <div class="content">
     <form  #data="ngForm" class="form" (submit)="signUp(data.value, password.value)">
-
-        <input type="text" ngModel  name="name" placeholder="nome">
-        <input type="text" ngModel name="email" placeholder="email">
-
-        <input type="password" #password name="senha" placeholder="senha">
+        <p>Nome</p>
+        <input type="text" ngModel  name="name" placeholder="NomeBemLegal">
+        <p>Digite seu E-mail</p>
+        <input type="text" ngModel name="email" placeholder="Felipinho123@exemplo.com">
+        <p>Escolha sua senha</p>
+        <input type="password" #password name="senha" placeholder="ExemploSenhaMuitoForte">
 
         <div>
             <button type="submit">Cadastrar</button>
