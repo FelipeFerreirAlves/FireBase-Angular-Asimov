@@ -1,14 +1,21 @@
 <div class="Formatação">
-    <h1>Bem vindo, para prosseguir informe seu email e senha ou se cadastre</h1>
+    <h1>Login</h1>
+    <hr>
     <div class="content">
         <form  #data="ngForm" class="form" (submit)="signIn(data.value, password.value)">
-            <input type="text" ngModel name="email" placeholder="E-mail">
-
-            <input type="password" #password name="senha" placeholder="Senha">
+            <p>Seu e-mail</p>
+            <input type="text" ngModel name="email" placeholder="Felipinho123@exemplo.com">
+            <p>Sua senha</p>
+            <input type="password" #password name="senha" placeholder="ExemploSenhaMuitoForte">
 
             <div>
-                <button class="b1" type="submit">Login</button>
-                <button class ="button2" type="button" (click)="signUp()">Register</button>
+                <button class="b1" type="submit">Entrar</button>
+                <div class="CorFundo">
+                    <p>
+                        Ainda não tem conta?
+                        <button class ="button2" type="button" (click)="signUp()">Register</button>
+                    </p>
+                </div>
             </div>
         </form>
     </div>
