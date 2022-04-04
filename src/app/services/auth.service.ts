@@ -27,6 +27,7 @@ export class AuthService {
 
       })
       .catch((error: any) =>{
+        alert('Verifique a formatação dos dados inseridos')
         console.log(error)
       });
   }
@@ -45,6 +46,7 @@ export class AuthService {
         this.router.navigate(['home']);
       })
       .catch((error) =>{
+        alert('Senha ou E-mail incorreto');
         console.log(error);
       });
   }
