@@ -17,6 +17,7 @@ import { CalculadoraModule } from './calculadora';
 import { ConversorModule } from './conversor';
 import { TarefasModule } from './tarefas';
 import { JogoDaVelhaModule } from './jogo-da-velha';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -24,7 +25,8 @@ import { JogoDaVelhaModule } from './jogo-da-velha';
   declarations: [
     AppComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

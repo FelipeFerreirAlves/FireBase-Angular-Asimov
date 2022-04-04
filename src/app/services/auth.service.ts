@@ -43,7 +43,7 @@ export class AuthService {
            });
          });
         }
-        this.router.navigate(['home']);
+        this.router.navigate(['navbar/home']);
       })
       .catch((error) =>{
         alert('Senha ou E-mail incorreto');

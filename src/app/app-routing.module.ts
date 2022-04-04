@@ -1,3 +1,4 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardRoutes } from './dashboard/dashboard-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
@@ -20,15 +21,28 @@ const routes: Routes = [
     path: 'sign-up',
     component: SignUpComponent
   },
+
   {
-    path: 'home',
-    component: HomeComponent
+    path: 'navbar',
+    component: NavbarComponent,
+
+    children:[
+
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+
+      
+      ...DashboardRoutes,
+      ...CalculadoraRoutes,
+      ...ConversorRoutes,
+      ...TarefasRoutes,
+      ...JogoDaVelhaRoutes
+
+    ]
   },
-  ...DashboardRoutes,
-  ...CalculadoraRoutes,
-  ...ConversorRoutes,
-  ...TarefasRoutes,
-  ...JogoDaVelhaRoutes
+  
   
 ];
 @NgModule({
