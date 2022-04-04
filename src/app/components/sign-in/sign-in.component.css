@@ -1,13 +1,68 @@
 .content{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    width: 500px;
+    min-height: 560px;    
+    margin: 0px auto;
+    position: relative;
 }
+
+.Formatação h1{
+    text-align: center;
+}
+
+
 
 .form{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.CorFundo{
+
+    height: 50px;
+    border-radius: 8px;
+    padding: 17px 30px 20px 30px;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 10px;
+    background-color: #56bfe4;
+
+}
+
+.b1{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 12px;
+    font-size: 20px;
+    align-items: center;
+    width: 100%;
+    color: black; 
+}
+  
+.b1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    font-size: 15px;
+    width: auto;
+    color: black; 
+}
+  
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 0px;
+    box-sizing: border-box;
+  }
+
+  button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }

@@ -1,14 +1,19 @@
-<div class="content">
-    <form  #data="ngForm" class="form" (submit)="signUp(data.value, password.value)">
+<div class="Formatação">
+    <h1>Cadastro</h1>
+    <hr>
+    <div class="content">
+        <form  #data="ngForm" class="form" (submit)="signUp(data.value, password.value)">
+            <p>Nome</p>
+            <input type="text" ngModel  name="name" placeholder="NomeBemLegal">
+            <p>Digite seu E-mail</p>
+            <input type="text" ngModel name="email" placeholder="Felipinho123@exemplo.com">
+            <p>Escolha sua senha</p>
+            <input type="password" #password name="senha" placeholder="ExemploSenhaMuitoForte">
 
-        <input type="text" ngModel  name="name" placeholder="nome">
-        <input type="text" ngModel name="email" placeholder="email">
-
-        <input type="password" #password name="senha" placeholder="senha">
-
-        <div>
-            <button type="submit">Cadastrar</button>
-            <button type="button" (click)="Return()">Voltar</button>
-        </div>
-    </form>
+            <div>
+                <button class="b1" type="submit">Cadastrar</button>
+                <button class="b1" type="button" (click)="Return()">Voltar</button>
+            </div>
+        </form>
+    </div>
 </div>
